@@ -1,0 +1,232 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="SLO Tracker" property="og:title">
+        <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+        <link href="styles.css" rel="stylesheet">
+        <title>SLO Tracker</title>
+    </head>
+    <body>
+        <div class="navbar" style="position: sticky; top: 0; box-shadow: 8px 8px 19px 0 rgb(0 0 0 / 3%); background-color: white;">
+            <div class="container">
+                <div style="display: flex; justify-content: space-between;">
+                    <div>
+                        <a href="http://slotracker.com" class="logo" style="padding: 15px 0px 15px 0px; display: inline-block;">
+                            <img src="images/slo_tracker_logo.png" width="150" alt="logo" />
+                        </a>
+                    </div>
+                    <div style="display: flex; align-items: center;">
+                        <a href="https://github.com/roshan8/slo-tracker">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content" style="background-color: #f7f7f7;">
+            <div class="container">
+                <h1 style="text-align:center; font-size: 2em; margin: 0px; font-weight: 600;">Track Error Budget & Burn Rate automatically</h1>
+                <h2 style="text-align: center; font-size: 1em; font-weight: 400;">An open-source tool designed to make Error Budget and SLO tracking simpler</h2>
+                <div class="flex-center">
+                    <a href="https://github.com/roshan8/slo-tracker" class="button" style="border-radius: 4px; background-color: #052b4e; color: white; 
+                     padding: 10px;">Go to GitHub</a>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="container">
+                <h3>What is SLO tracker?</h3>
+                <div style="display: flex;">
+                    <div style="width: 45%; padding-right: 74px;">
+                        <p style="margin-top: 0px;">
+                            SLO Tracker allows you to balance service reliability with the pace of innovation. 
+                            You can define the target SLO and use corresponding SLIs to track Error Budget. 
+                            The error budget thus forms a control mechanism for diverting attention to stability as needed.
+                        </p>
+                        <p>
+                            Eg: For a 99.99% SLO, the error budget will be 52.56 mins in a year, which indicates the amount of acceptable 
+                            downtime (in a year) without breaching the SLO.
+                        </p>
+                        <ul style="margin-bottom: 0px;">
+                            <li><b>Webhook Integration for Observability:</b> 
+                                Alerts from Prometheus, Pingdom, New Relic, etc., can be sent to the SLO Tracker and Error Budget will get deducted and your current SLOs will be adjusted.
+                            </li>
+                            <li>
+                                <b>SLO Violation Dashboard:</b> 
+                                Provides a unified dashboard for all the SLOs that have been set up, in turn giving insights into the SLIs being tracked.
+                            </li>
+                            <li style="margin-bottom: 0px;">
+                                <b>Analytics:</b> 
+                                Displays basic analytics on how you spent Error Budget over a period of time, and Error Budget consumption by SLIs (SLI distribution graph).
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="width: 55%;">
+                        <img src="images/SLO_Tracker_ss.png" style="width: 100%; border: 1px solid #73879b;" alt="SLO Tracker Screenshot" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content" style="background-color: #f7f7f7;">
+            <div class="container">
+                <h3>Our motive behind building the SLO tracker</h3>
+                <p>
+                    Code changes are a major source of instability, representing roughly 70% of outages. So development work for features, 
+                    directly competes with development work for stability.
+                </p>
+                <div class="flex-center" style="align-items: stretch;">
+                    <div class="inner">
+                        <div style="display: flex; margin-bottom: 15px; align-items: center;">
+                            <img src="images/card_1.svg" style="width: 16%; margin-right: 15px;" alt="decoration_1" />
+                            <p class="card-head">No centralized location for tracking SLOs</p>
+                        </div>
+                        <p class="card-body">
+                            When multiple tools are used to monitor SLIs, it becomes challenging to track your current SLOs/ Error Budget in one place.
+                        </p>
+                    </div>
+                    <div class="inner">
+                        <div style="display: flex; margin-bottom: 15px; align-items: center;">
+                            <img src="images/card_2.svg" style="width: 13%; margin-right: 15px;" alt="decoration_2" />
+                            <p class="card-head">Reporting of False positives</p>
+                        </div>
+                        <p class="card-body">
+                            Valuable minutes are lost from the Error Budget in case of false positives even when there 
+                            is no genuine SLO violation. Bringing back minutes into Error Budget then becomes complicated.
+                        </p>
+                    </div>
+                    <div class="inner" style="margin-right: 0px;">
+                        <div style="display: flex; margin-bottom: 15px; align-items: center;">
+                            <img src="images/card_3.svg" style="width: 15%; margin-right: 15px;" alt="decoration_3" />
+                            <p class="card-head">Lack of insight into past violations</p>
+                        </div>
+                        <p class="card-body">
+                            At times, it is difficult to get insights into past violations and how the Error Budget was spent.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="container">
+                <h3>What does the SLO tracker do?</h3>
+                <p>
+                    Our error budget tracker seeks to provide a simple and effective way to keep track of the error budget burn 
+                    rate without the hassle of configuring and aggregating multiple data sources.
+                </p>
+                <div class="flex-center" style="align-items: stretch;">
+                    <div class="outer">
+                        <p style="margin-bottom: 10px;"><b><u>Setup target SLO budget</u></b></p>
+                        <p style="margin-top: 0px;">
+                            Users first have to set up their target SLO and configure the integrations with the supported monitoring tools. 
+                            When an Incident gets reported, error budget will then be automatically reduced according to the duration of outage.
+                        </p>
+                    </div>
+                    <div class="outer" style="margin-right: 0px;">
+                        <p style="margin-bottom: 10px;"><b><u>Manually report incidents or integrate with tools</u></b></p>
+                        <p style="margin-top: 0px;">
+                            If a violation is not caught in your monitoring tool or if this tool doesn’t have integration 
+                            with your monitoring tool, then the incident can be reported manually through the user interface.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex-center" style="align-items: stretch;">
+                    <div class="outer">
+                        <p style="margin-bottom: 10px;"><b><u>Analyze SLO violations by measuring SLI indicators</u></b></p>
+                        <p style="margin-top: 0px;">
+                            It also provides analytics into SLO violation distribution. (SLI distribution graph)                   
+                        </p>
+                    </div>
+                    <div class="outer" style="margin-right: 0px;">
+                        <p style="margin-bottom: 10px;"><b><u>Greater retention period of SLO violations</u></b></p>
+                        <p style="margin-top: 0px;">
+                            Doesn’t require much storage space since this only stores violations, and not every metric.
+                        </p>
+                    </div>
+                </div>
+                <p style="margin-bottom: 0px;">To learn more, check out the 
+                    <a href="https://www.squadcast.com/blog/introducing-our-open-source-slo-tracker-a-simple-tool-to-track-slos-and-error-budget">
+                        blog post
+                    </a>.
+                </p>
+            </div>
+        </div>
+        <div class="content" style="background-color: #f7f7f7;">
+            <div class="container">
+                <div style="display: flex; align-items: center;">
+                    <div style="width: 75%;">
+                        <h3>What’s next for the tracker?</h3>
+                        <p>Here’s what we are currently working on:</p>
+                        <ul style="margin-bottom: 0px;">
+                            <li>A few more monitoring tool integrations.</li>
+                            <li><s>Ability to track multiple product SLOs.</s> 
+                                <span style="font-size: 0.8em; color: green;">
+                                    (done)
+                                </span>
+                            </li>
+                            <li>More graphs for analytics.</li>
+                            <li style="margin-bottom: 0px;">Better visualization to pinpoint problematic services.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img src="images/next.svg" width="70" alt="decoration_4" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="container">
+                <h3>Contributed by:</h3>
+                <div style="display: flex; align-items: center;">
+                    <div style="width: 75%;">
+                        <ul>
+                            <li><a href="https://github.com/roshan8">Roshan shetty</a></li>
+                            <li><a href="https://github.com/D3vd">Dev Daksan</a></li>
+                            <li><a href="https://github.com/onisaint">Madhu Kumar D S</a></li>
+                            <li><a href="https://github.com/pranavsq">pranavsq</a></li>
+                            <li><a href="https://github.com/lpmi-13">Adam Leskis</a></li>
+                            <li><a href="https://github.com/nogoodusername">hackergnome</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img src="images/contribution.svg" width="80" alt="decoration_5" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content" style="background-color: #f7f7f7;">
+            <div class="container">
+                <h3>Resources:</h3>
+                <div style="display: flex; align-items: center;">
+                    <div style="width: 75%;">
+                        <ul>
+                            <li><a href="https://sre.google/sre-book/service-level-objectives/">Service Level Objectives</a></li>
+                            <li><a href="https://www.squadcast.com/categories/all-slo-blogs">Blogs</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img src="images/resources.svg" width="80" alt="decoration_6" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="container">
+                <div style="display: flex; align-items: center;">
+                    <div style="width: 80%;">
+                        <img src="images/slo_tracker_logo.png" width=150 alt="logo"/>
+                    </div>
+                    <span style="font-size: 1em; font-weight: 600; margin-right: 8px;">Supported by</span>
+                    <a href="https://www.squadcast.com/">
+                        <img src="images/Squadcast_logo.png" width=100 alt="logo" style="position: relative; top: 1px;"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109315563-7"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-109315563-7');
+        </script>
+    </body>
+</html>
